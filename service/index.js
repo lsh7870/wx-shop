@@ -10,7 +10,10 @@ const request = require('../utils/requerst')
 // }
 
 // es6
-export const index=()=>{
-  return request.get('/api/index')
+export const index=(data)=>{
+  const options = {
+    data
+  }
+  return request.get('/api/index',options)
 }
 

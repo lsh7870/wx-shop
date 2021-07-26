@@ -1,4 +1,20 @@
-<view>
-  首页
+<swiper indicator-dots autoplay interval="1550" circular>
+  <swiper-item wx:for="{{slides}}" wx:key="id" >
+    <image src="{{item.img_url}}"></image>
+  </swiper-item>
+</swiper>
+<view class="box" >
+  <view class="cent" wx:for="{{goods}}" wx:key="id">
+    <view class="img">
+      <image src="{{item.cover_url}}"></image>
+    </view>
+    <view class="button-cent">
+      <view>{{item.title}}</view>
+      <view class="nun">
+        <text class="left">￥{{item.price}}</text>
+        <text class="right">{{item.sales}}人购买</text>
+      </view>
+    </view>
+  </view>
+
 </view>
-<van-button type="primary">按钮</van-button>

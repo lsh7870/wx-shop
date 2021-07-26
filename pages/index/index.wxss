@@ -1,19 +1,34 @@
 /**index.wxss**/
-.userinfo {
+.box{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2px; 
+ 
 }
-
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.cent{
+  margin: 8px 0;
+  width: 48%;
 }
-
-.usermotto {
-  margin-top: 200px;
+.cent image{
+  width: 100%;
+}
+.button-cent{
+  text-align:center;
+}
+.button-cent .nun{
+  padding:0 15px;
+}
+.button-cent .nun::before,.button-cent .nun::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.button-cent .nun .left{
+  /* flex: 1; */
+  float: left;
+}
+.button-cent .nun .right{
+  /* flex: 1; */
+  float: right;
 }

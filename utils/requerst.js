@@ -45,7 +45,7 @@ const request = (url,method='GET',options ={})=>{
           wx.showToast({
             title:msg,
             icon:'error',
-            duration:2000
+            duration:1000
           })
         }
           
