@@ -1,0 +1,5 @@
+<van-empty description="你还为绑定微信"></van-empty>
+<view class="op">
+  <van-button type="primary" block bindtap="handeBind">立即绑定</van-button>
+  <view class="skip">以后再说</view>
+</view>

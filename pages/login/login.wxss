@@ -1,0 +1,7 @@
+/* pages/login/login.wxss */
+.text-botton{
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  padding: 0 40rpx;
+}

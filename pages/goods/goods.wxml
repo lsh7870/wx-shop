@@ -1,0 +1,61 @@
+<view id="box">
+  <view class="top-imag">
+    <van-image
+      fit="contain"
+      width="750rpx"
+      height="500rpx"
+      src="{{goods.cover_url}}"
+    />
+  </view>
+  <view class="top-introd">
+    <view class='top-text-box'>
+      <view class="top-text">{{goods.description}}</view>
+      <view class="top-price">
+        <span>￥{{goods.price}}</span><span>销量:{{goods.sales}}</span>
+      </view>
+      <van-tabs bind:click="onClick">
+        <van-tab title="详情"><rich-text nodes="{{goods.details}}"></rich-text></van-tab>
+        <van-tab title="评论">
+          <van-empty  wx:if="!{{comments}}" description="还没有人评论哦" />
+          <view wx:for="{{comments}}" wx:key="id">
+            <van-card
+              desc="{{item.content}}"
+              title="{{item.title}}"
+              thumb="{{item.user.avatar_url}}"
+            >
+            <view slot="footer">
+              <van-button size="mini">{{item.updated_at}}</van-button>
+            </view>
+          </van-card>
+        </view>
+        </van-tab>
+        <van-tab title="推荐">
+          <van-card
+            wx:for="{{like_goods}}" wx:key="id"
+            thumb-link="/pages/goods/goods?id={{item.id}}"
+            price="{{item.price}}"
+            title="{{item.title}}"
+            thumb="{{item.cover_url}}"
+          />
+        </van-tab>
+      </van-tabs>
+
+    </view>
+  </view>
+
+  <van-goods-action>
+  <van-goods-action-icon icon="chat-o" text="客服" bind:click="onClickIcon" />
+  <van-goods-action-icon icon="cart-o" text="购物车" bind:click="onClickIcon" />
+  <van-goods-action-icon  text="{{is_collect==0?'收藏':'已收藏'}}" bind:click="onCollect">
+    <view slot="icon" style="height:22px;margin-top:2px;">
+      <van-icon  name="bag-o" color="{{is_collect == 0 ? '#646566' : '#ff0000'}}" size="18px" />
+    </view>
+  </van-goods-action-icon>
+  <!-- <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton"
+  /> -->
+  <van-goods-action-button text="加入购物车" bind:click="onClickButton" />
+</van-goods-action>
+</view>

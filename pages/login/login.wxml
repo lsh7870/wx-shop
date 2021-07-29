@@ -1,0 +1,24 @@
+<van-cell-group>
+  <van-field
+    model:value="{{ email }}"
+    label="邮箱"
+    placeholder="请输入邮箱"
+    error-message="{{error_email}}"
+  />
+
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    error-message="{{error_password}}"
+  />
+</van-cell-group>
+<view>
+  <van-button block type="primary" bindtap="login">登录</van-button>
+</view>
+<view class='text-botton'>
+  <navigator >忘记密码</navigator>
+  <navigator url="/pages/register/register">立即注册</navigator>
+</view>
+

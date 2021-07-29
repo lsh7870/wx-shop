@@ -1,0 +1,32 @@
+<van-cell-group>
+  <van-field
+    model:value="{{ name }}"
+    label="昵称"
+    placeholder="昵称"
+    error-message="{{error_name}}"
+  />
+  <van-field
+    model:value="{{ email }}"
+    label="邮箱"
+    placeholder="请输入邮箱"
+    error-message="{{error_email}}"
+  />
+
+  <van-field
+    model:value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    error-message="{{error_password}}"
+  />
+  <van-field
+    model:value="{{ password_confirm }}"
+    type="password_confirm"
+    label="确认密码"
+    placeholder="请输入密码"
+    error-message="{{error_password_confirm}}"
+  />
+</van-cell-group>
+<view>
+  <van-button block type="primary" bindtap="login">注册</van-button>
+  </view>

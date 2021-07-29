@@ -1,0 +1,6 @@
+/* pages/my/my.wxss */
+.img{
+  height: 250rpx;
+  padding:10rpx 0 10rpx 190rpx;
+  margin: 0 auto;
+}

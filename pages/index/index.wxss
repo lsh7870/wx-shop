@@ -1,0 +1,38 @@
+/**index.wxss**/
+.lunbo image{
+  width: 100%;
+  height: 100%;
+}
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2px; 
+ 
+}
+.cent{
+  margin: 8px 0;
+  width: 48%;
+}
+.cent image{
+  width: 100%;
+}
+.button-cent{
+  text-align:center;
+}
+.button-cent .nun{
+  padding:0 15px;
+}
+.button-cent .nun::before,.button-cent .nun::after{
+  content:'';
+  display:block;
+  clear:both;
+}
+.button-cent .nun .left{
+  /* flex: 1; */
+  float: left;
+}
+.button-cent .nun .right{
+  /* flex: 1; */
+  float: right;
+}
